@@ -262,9 +262,10 @@ def player1_attack_player2():
         if(player1.banskill==0):#未被封技能
             if(round%player1.cold==0):#大招可释放
                 if(iplayer2==10 and random.randint(0,100)<16):#呆鹅打断大招判定
-                    print(player1.name+"发动技能"+player1.skill1name)
-                    print(player2.name+"发动技能"+player2.skill1name)
+                    print(player1.name+"发动技能"+player1.skill1name,end=' ')
+                    print(player2.name+"发动技能"+player2.skill1name,end=' ')
                     player2skill1(iplayer2)
+                    print(player1.name+"剩余血量"+str(player1.hp))
                 else:
                     print(player1.name+"发动技能"+player1.skill1name,end='  ')
                     player1skill1(iplayer1)
@@ -308,9 +309,10 @@ def player2_attack_player1():
             if(iplayer2!=9 or iplayer2!=8 or iplayer2 !=10):
                 if(round%player2.cold==0):
                     if(iplayer1==10 and random.randint(0,100)<16):
-                        print(player2.name+"发动技能"+player2.skill1name)
-                        print(player1.name+"发动技能"+player1.skill1name)
+                        print(player2.name+"发动技能"+player2.skill1name,end=' ')
+                        print(player1.name+"发动技能"+player1.skill1name,end=' ')
                         player1skill1(iplayer1)
+                        print(player2.name+"剩余血量"+str(player2.hp))
                     else:
                         print(player2.name+"发动技能"+player2.skill1name,end='  ')
                         player2skill1(iplayer2)
